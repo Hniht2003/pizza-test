@@ -1,0 +1,513 @@
+*{padding:0px; margin: 0px; box-sizing: border-box;}
+
+.Tong {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+  margin: 0 auto;
+}
+.col-12 {
+    padding: 0px;
+}
+
+/* Phan dau */
+
+header {
+  background-color: rgb(42, 42, 42);
+  position: fixed;
+  z-index: 1;
+  height: 68px;
+  width: 100%;
+}
+
+.nav li{
+    float: left;
+    display: flex;
+}
+
+.a {
+  max-width: 1300px;
+}
+
+.nav li a {
+  text-decoration: none;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 17px;
+  color: white;
+  width: 90px;
+  margin-left: 20px;
+}
+
+.nav .logo {
+  margin-left: 50px;
+  padding-top: 1px;
+}
+
+.nav>.menu {
+  text-align: right;
+  
+}
+
+.nav li a:hover {
+  color: #d3b673;
+  text-decoration: underline;
+}
+
+.nav{
+  position: absolute;
+  width: 100%;
+  padding-top: 5px;
+  line-height: 60px;
+}
+
+.nav li>.NQ {
+  width: 120px;
+}
+/*  */
+.nav ul{
+  position: absolute;
+  display: none;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  width: 230px;
+  background-color:rgb(42, 42, 42);
+  box-shadow: 0 0 1px gray;
+  margin-top: 60px;
+}
+
+/* .nav ul {
+  margin-top: 63px;
+} */
+
+.nav ul a {
+  display: block;
+  line-height: 40px;
+  color: white;
+  font-variant: small-caps;
+  font-size: 0 10px;
+  text-align: left ;
+
+  width: 200px;
+}
+
+.nav ul a:hover{
+  color: #d3b673;
+}
+
+.nav>li:hover>ul{
+  display: block;
+}
+/*  */
+
+.TC {
+  margin-left: 120px;
+}
+
+/* phan giua */
+
+.text1 {
+  color: #d3b673;
+  font-size: 22px;
+  font-family: Muli, sans-serif;
+  font-weight: bold;
+  padding-top: 50px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.text2{
+  font-size: 36px;
+  color: #000000;
+  text-align: center;
+  font-family: BalooExtra;
+  text-transform: uppercase;
+}
+
+.text3 {
+  color: #d3b673;
+  font-size: 22px;
+  font-family: Muli, sans-serif;
+  font-weight: bold;
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.text4{
+  font-size: 36px;
+  color: #000000;
+  text-align: center;
+  font-family: BalooExtra;
+  text-transform: uppercase;
+
+}
+
+.LG {
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.the{
+  box-shadow: 0px 0px 4px gray;
+  text-align: center;
+  /* border: 1px solid black; */
+  margin: 15px;
+  padding: 17px;
+  float: left;
+  overflow: hidden;
+  height: 400px;
+}
+
+.col-3 {
+  padding-left: 20px;
+}
+
+.the .imgs {
+  width: 100%;
+  height: 230px;
+  display: block;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.the .imgs:hover {
+  height: 100%;
+  cursor: pointer;
+}
+
+.tenSanPham {
+    width: 100%;
+    font-family: Muli;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 8px;
+}
+
+.giatien {
+  font-family: Muli;
+    font-size: 14px;
+    font-weight: 700;
+    color: #8a733f;
+    text-align: center;
+    margin-top: 24px;
+}
+
+.giatien .del {
+  margin-left: 8px;
+  color: #bebebe;
+}
+
+.num{
+  margin:auto;
+  align-items: center;
+  width: 50%;
+  background-color:#d3b673;
+  padding: 5px 10px;
+  text-decoration: none; 
+  color: white;
+  display: block;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.num:hover, .num1:hover, .num2:hover{
+  background-color: rgb(227, 227, 227);
+}
+
+.num1 {
+  margin:auto;
+  align-items: center;
+  width: 10%;
+  background-color:#d3b673;
+  padding: 9px 9px;
+  text-decoration: none; 
+  color: white;
+  display: block;
+  margin-top: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.num1:hover{
+  background-color:#bebebe;
+}
+
+.num2 {
+  margin:auto;
+  align-items: center;
+  width: 25%;
+  background-color:#d3b673;
+  padding: 9px 9px;
+  text-decoration: none; 
+  color: white;
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 280px;
+}
+
+#slideshow img{
+  width: 70%;
+margin-left: 15%;
+  margin-top: 20px;
+  height: 400px;
+}
+
+
+.test1{
+ width: 300px;
+ color: #d3b673;
+    font-size: 22px;
+    margin-bottom: 1px;
+    font-family: Muli, sans-serif;
+    font-weight: bold;
+    padding-left: 100px;
+}
+
+.test2{
+    width: 380px;
+    font-size: 36px;
+    text-align: center;
+    color: #000000;
+    font-family: "BalooExtra";
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    padding: 0 50px;
+}
+
+.test3{
+  width: 350px;
+  text-align: center;
+  font-family: Muli;
+    color: #333333;
+    font-weight: 300;
+    font-size: 14px;
+    margin: 16px 0;
+    padding-left: 50px;
+}
+
+
+.col-10 {
+  margin-top: 20px;
+  box-shadow: 1px 1px 1px 7px #d3b673;
+  width: 90%;
+  margin-bottom: 20px;
+  margin-left: 60px;
+}
+
+
+
+.thetintuc {
+  box-shadow: 0px 0px 4px gray;
+  text-align: center;
+  /* border: 1px solid black; */
+  margin: 15px;
+  padding: 17px;
+  float: left;
+  overflow: hidden;
+  height: 400px;
+}
+
+.thetintuccon {
+  box-shadow: 0px 0px 4px gray;
+  float: left;
+  margin: 15px;
+  padding: 0px;
+  overflow: hidden;
+  height: 210px;
+  width: 45%;
+}
+
+.thetintuccon img{
+  width: 215%;
+}
+
+.tintuc {
+  text-align: left;
+  font-family: Muli;
+    color: #333333;
+    font-weight: 300;
+    font-size: 14px;
+    margin: 16px 0;
+}
+
+.tentintuc {
+  width: 100%;
+  font-family: Muli;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+
+.TT {
+  position: absolute;
+  color: white;
+  width: 500px;
+  padding-left: 60px;
+  padding-top: 15px;
+}
+
+.TTcon p{
+    /* text-align: center; */
+  width: 32%;
+  margin-left: 10px;
+}
+
+.ttt {
+  display: inline-block;
+  height: 40px;
+  position:absolute ;
+  margin-top: 40px;
+  width:0px;
+}
+
+.ttt {
+  width: 100%;
+  font-family: Muli;
+  font-size: 15px;
+  font-weight: 700;
+
+  overflow: hidden;
+
+}
+
+.asd {
+  width: 100%;
+  font-family: Muli;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 18px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+
+.asc {
+  width: 30%;
+  margin-top: 14px;
+}
+/* phan cuoi */
+.footer-line a{
+  font-family: Barlow;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-line1 {
+  font-family: Barlow;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.tittle-footer {
+  color: #d3b673;
+  font-size: 22px;
+  font-family: Muli, sans-serif;
+  font-weight: bold;
+  text-align: left;
+}
+
+.anhcuoi {
+  position: relative;
+  padding-top: 100px;
+  margin-left: 20px;
+}
+
+.icons {
+    background-color: #d3b673;
+    position: absolute;
+    margin-top: 20px;
+    transform: translate(60%,300%);
+    display: block;
+    padding: 0 10px 0px ;
+    display: block;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .icons>img{
+    margin: 3px;
+  }
+  .the .hide {
+    display: none;
+  }
+#slideshow {
+  position: relative;
+}
+
+#slideshow i:first-child{
+    position: absolute;
+    color: gray;
+    font-size: 40px;
+    left: 80%;
+    bottom: 45%;
+}
+
+#slideshow i:last-child{
+  position: absolute;
+  color: gray;
+  font-size: 40px;
+  left: 17%;
+  bottom: 45%;
+}
+
+#slideshow .dieuhuong i:hover{
+color: gainsboro;
+cursor: pointer;
+}
+
+
+footer {
+  background-image: url("https://neohouse.vn/wp-content/uploads/2019/10/thiet-ke-thi-cong-noi-that-quan-tra-sua-tocotoco-3.jpg");
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sanpham.css">
+</head>
+<body>
+    <div id="Tong">
+        <header class="col-12 a ">
+            <nav>
+                <ul class="nav">
+                        <li class="logo"><a href="index.html"><img src="https://tocotocotea.com/wp-content/uploads/2021/04/Logo-ngang-01.png" width="230%"></a></li>
+                        <li class="TC"><a href="#">Trang chủ</a></li>
+                        <li>
+                            <a href="#">Giới Thiệu</a>
+                            <ul>
+                                <li><a href="">Lịch Sử Và Sức Mệnh</a></li>
+                                <li><a href="">Thành Tựu Đạt Được</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="sanpham.html">Sản Phẩm</a>
+                            <ul>
+                                <li><a href="">INSTANT MILKTEA</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Tin Tức</a>
+                            <ul>
+                                <li><a href="">Tin Tức Khuyến Mãi</a></li>
+                                <li><a href="">Câu Chuyện Thương Hiệu</a></li>
+                                <li><a href="">Sự Kiện</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Cửa Hàng</a></li>
+                        <li><a class="NQ" href="#">Nhượng Quyền</a></li>
+                        
+                </ul>
+            
+            </nav>
+            </header>
+            <!-- phan giua -->
+            <div class="col-12">
+                <div class="tongphu">
+                <div class="col-6">
+                    
+                            <h2 style="text-align: center; padding-top: 70px;">Danh muc hang hoa</h2><br>
+                        <table class="table" border="1" width="500px">
+                            <tr style="background-color:rgb(147, 199, 147) ;">
+                                <th>Ảnh Sản Phẩm</th>
+                                <th>Tên Sản Phẩm</th>
+                                <th>Số Lượng</th>
+                                <th>Giá</th>
+                                <th>Thêm vào giỏ</th>
+                            </tr>
+                            <tr>
+                                <td><img src="imgslide/ly1.jpg" alt="" width="80px"></td>
+                                <td style="padding: 12px;">Trà sữa Tươi</td>
+                                <td><input style="width: 50px;" type="number" value="1" min="0"></td>
+                                <td style="padding: 10px;">25000</td>
+                                <td style="padding: 25px;"><button class="buton" onclick="them(this)">Them</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="imgslide/ly2.jpg" alt="" width="80px"></td>
+                                <td>Trà sữa Socola</td>
+                                <td><input style="width: 50px;" type="number" value="1" min="0"></td>
+                                <td style="padding: 10px;">25000</td>
+                                <td style="padding: 25px;"><button class="buton" onclick="them(this)">Them</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="imgslide/ly3.jpg" alt="" width="80px"></td>
+                                <td>Trà sữa Matcha</td>
+                                <td><input style="width: 50px;" type="number" value="1" min="0"></td>
+                                <td style="padding: 10px;">25000</td>
+                                <td style="padding: 25px;"><button class="buton" onclick="them(this)">Them</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="imgslide/ly4.jpg" alt="" width="80px"></td>
+                                <td>Trà sữa Dau</td>
+                                <td><input style="width: 50px;" type="number" value="1" min="0"></td>
+                                <td style="padding: 10px;">25000</td>
+                                <td style="padding: 25px;"><button class="buton" onclick="them(this)">Them</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="imgslide/ly5.jpg" alt="" width="80px"></td>
+                                <td>Trà sữa Dao</td>
+                                <td><input style="width: 50px;" type="number" value="1" min="0"></td>
+                                <td style="padding: 10px;">25000</td>
+                                <td style="padding: 25px;"><button class="buton" onclick="them(this)">Them</button></td>
+                            </tr>
+                        </table>
+                
+                </div>
+
+                <div class="col-6">
+                    <form action="" name="form1" onsubmit="validateForm()">
+                        <h2 style="text-align: center; padding-top: 70px;">Gio Hang Cua Ban</h2><br>
+                    <table border="1" id="cart" width="500px" class="table" name="tabble">
+                        <!-- <tr>
+                            <th>Ảnh Sản Phẩm</th>
+                            <th>Tên Sản Phẩm</th>
+                            <th>Số Lượng</th>
+                            <th>Giá</th>
+                            <th>Xóa</th>
+                        </tr> -->
+                    </table name="hang">
+                    <h3 class="h">
+                        Tong so tien : 
+                        <span id="tong">0</span>
+                    </h3>
+                    <!-- <a href="" class="num" onclick="dathang()">Đặt Hàng</a> -->
+                    <input type="submit" value="Submit">
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+
+
+            
+            <script>
+            function them(button){
+            var row = button.parentElement.parentElement.cloneNode(true);
+            
+            var btnxoa = row.getElementsByTagName("button")[0];
+            btnxoa.innerText = "Xoa";
+            btnxoa.setAttribute('onclick','xoa(this)');
+            document.getElementById("cart").appendChild(row);
+            tinhTong();
+        }
+
+        function xoa(button){
+            var row = button.parentElement.parentElement;
+            document.getElementById("cart").removeChild(row);
+            tinhTong();
+        }
+
+        function tinhTong(){
+            var cart = document.getElementById("cart");
+            var rows = cart.getElementsByTagName("tr");
+            var tong = 0;
+            for(var i=0; i < rows.length; i++){
+               var cells = rows[i].getElementsByTagName("td");
+               console.log(cells[3]);
+               var price = Number(cells[3].innerText);
+              var prices = Number(cells[2].firstChild.value);
+               console.log(price);
+               var soluong = prices * 1;
+               tong += soluong * price; 
+               console.log(tong);
+                
+            }
+            document.getElementById("tong").innerText = tong;
+        }
+
+            function validateForm(){
+                var cartt = document.getElementById("cart");
+                if(cartt.querySelector('td') == null){
+                    alert('Vui long them hang');
+                    return false;
+                }
+                alert('ban da dat hang thanh cong');
+                    return true;
+                
+            }
+
+            </script>
+    </div>
+</body>
+</html>
